@@ -4,12 +4,12 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        if n == 1:
+        if n == 1 or n == 2:
             return True
-        elif n%2 != 0 or n <= 0:
+        elif n%2 != 0 or n < 2:
             return False
         else:
-            i = 1
+            i = 2
             while i < n:
                 if 2**(i) == n:
                     return True
