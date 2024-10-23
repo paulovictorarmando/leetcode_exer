@@ -10,7 +10,7 @@ class Solution(object):
             return False
         else:
             i = 3
-            while True:
+            while i < n:
                 if 3**i == n:
                     return True
                 elif 3**i > n:
