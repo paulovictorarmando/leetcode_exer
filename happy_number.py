@@ -1,19 +1,12 @@
-n = 19
-a = list()
-j = 0
-while True:
-    a.append(n%10)
-    n = n//10
-    if n < 1:
-        for i in a:
-            j += i**2
-        if j == 1:
-            print("yes")
-            break
-        elif j > 9:
-            n = j
-            del a[:]
-        else:
-            print("not")
-            break
-          yet rs
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        while n >= 7:
+            res = 0
+            while n > 0:
+                res += (n % 10)**2
+                n //= 10
+            n = res
+        return n == 1 
+if __name__ == "__main__":
+    solution = Solution()
+    print(solution.isHappy(1))
